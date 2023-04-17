@@ -1,0 +1,98 @@
+.team {
+	padding: 50px 30px;
+	position: relative;
+	@media (min-width: $breakpoint-md) {
+		padding-top: 80px;
+	}
+	
+	&__slide {
+		background: $grey-alt-color;
+		border-radius: 12px;
+		overflow: hidden;
+		@media (min-width: $breakpoint-lg) {
+			display: flex;
+		}
+	}
+
+	&__image {
+		height: 500px;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		@media (min-width: $breakpoint-lg) {
+			height: auto;
+			flex: 1 0 400px;
+		}
+		@media (min-width: $breakpoint-xl) {
+			height: 344px;
+		}
+		@media (min-width: $breakpoint-xxl) {
+			height: 298px;
+		}
+	}
+
+	&__inner {
+		padding: 30px;
+	}
+
+	&__inner-link {
+		color: $regular-color;
+		text-decoration: none;
+		text-transform: uppercase;
+		@include inner-link;
+		position: relative;
+		&::before {
+            content: '';
+            position: absolute;
+            top: 4px;
+            left: 80px;
+            width: 9px;
+            height: 9px;
+            border-bottom: 2px solid $regular-color;
+            border-right: 2px solid $regular-color;
+            transform: rotate(-45deg);
+        }
+	}
+
+	&__inner-title {
+		@include content-header-md;
+		@include gradient-text;
+		margin-bottom: 30px;
+		@media (min-width: $breakpoint-md) {
+			@include inner-title;
+		}
+	}
+
+	&__inner-name {
+		color: $grey-color-text;
+
+		p {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        p + p {
+			font-weight: 400;
+            font-size: 14px;
+            line-height: 22px;
+            padding-top: 6px;
+        }
+	}
+
+	&__pagination {
+		&.swiper-pagination  {
+			bottom: 0;
+		}
+
+		.swiper-pagination-bullet {
+			width: 16px;
+			height: 16px;
+			&.swiper-pagination-bullet-active {
+				background: $regular-color;
+			}
+		}
+	}
+}

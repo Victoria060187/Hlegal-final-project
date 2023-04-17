@@ -1,0 +1,74 @@
+.cards {
+    padding: 30px 0;
+    
+    &__head-link {
+        @include inner-link;
+        color:$regular-color;
+        text-decoration: none;
+        text-transform: uppercase;
+        position: relative;
+        &:hover {
+            color: $accent-color;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            top: 3px;
+            left: 70px;
+            width: 10px;
+            height: 10px;
+            border-bottom: 2px solid $regular-color;
+            border-right: 2px solid $regular-color;
+            transform: rotate(-45deg);
+        }
+        &:hover::before {
+            border-bottom: 2px solid $accent-color;
+            border-right: 2px solid $accent-color;
+        }
+    }
+        
+    &__head-title {
+        padding: 10px 0 30px 0;
+        @include gradient-text;
+        @include content-header-md;
+        @media (min-width: $breakpoint-md) {
+			font-size: 38px;
+            line-height: 46px;
+            padding: 10px 0 60px 0;
+		}
+    }
+
+    &__body {
+        display: flex;
+        gap: 30px;
+        flex-flow: wrap;
+        @media (min-width: $breakpoint-md) {
+			gap: 60px;
+		}
+    }
+
+    &__body-card {
+        overflow: hidden;
+        @media (min-width: $breakpoint-md) {
+			flex: 1 1 45%;
+		}
+        @media (min-width: $breakpoint-lg) {
+			flex: 1 1 28%;
+		}
+    }
+
+    &__body-icon {
+        width: 92px;
+        height: 92px;
+    }
+
+    &__body-title {
+        padding: 30px 0 15px 0;
+        @include cards-title;
+
+    }
+
+    &__body-text {
+        color: $white-color;
+    }
+}

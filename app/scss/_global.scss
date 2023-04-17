@@ -1,0 +1,79 @@
+html, body {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'Montserrat';
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 26px;
+}
+
+.wrapper {
+	background: $gradient-super-soft;
+	border-radius: 0px 0px 12px 12px;
+	padding-bottom: 60px;
+	position: relative;
+}
+
+.wrapper::before {
+	content: '';
+	position: absolute;
+	top: 100%;
+	left: 20px;
+	right: 20px;
+	background: #CACADB;
+	height: 10px;
+	border-radius: 0px 0px 12px 12px;
+}
+
+.wrapper::after {
+	content: '';
+	position: absolute;
+	top: calc(100% + 10px);
+	left: 40px;
+	right: 40px;
+	background: #E7E7F2;
+	height: 10px;
+	border-radius: 0px 0px 12px 12px;
+}
+
+.container {
+	// от 0px до бесконечности 
+	padding: 0 30px;
+
+	@media (min-width: $breakpoint-md) {
+		// от 767px до бесконечности
+		max-width: 708px;
+		margin: 0 auto;
+	}
+
+	@media (min-width: $breakpoint-lg) {
+		// от 1024px до бесконечности
+		max-width: 964px;
+	}
+
+	@media (min-width: $breakpoint-xl) {
+		// от 1440px до бесконечности
+		max-width: 1380px;
+	}
+
+	@media (min-width: $breakpoint-xxl) {
+		// от 1920px до бесконечности
+		max-width: 1660px;
+	}
+}
+
+.main-title {
+	font-weight: 700;
+	font-size: 38px;
+	line-height: 46px;
+	color: $white-color;
+}
+
+.hidden {
+	width: 0;
+	height: 0;
+	position: absolute;
+	z-index: -1;
+}

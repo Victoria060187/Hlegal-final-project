@@ -1,0 +1,40 @@
+.header {
+
+    &__header-services {
+        color: $white-color;
+    }
+
+    &__main-services {
+        min-height: auto;
+    }
+
+    &__nav-link-services {
+        @media (min-width: $breakpoint-md) {
+            text-decoration: underline;
+        }
+    }
+}
+
+.slash {
+    color: $accent-color;
+    font-size: 26px;
+	line-height: 24px;
+    @media (min-width: $breakpoint-md) {
+    display: inline-block;
+    background: url('../images/Slash.svg') no-repeat;
+    width: 21px;
+    font-size: 58px;
+	line-height: 50px;
+	color: $accent-color;
+    }
+}
+.slash-text {
+    font-size: 20px;
+	color: $white-color;
+    @media (min-width: $breakpoint-md) {
+    display: inline-block;
+    @include slash-text;
+	color: $white-color;
+    padding-bottom: 15px;
+    }
+}

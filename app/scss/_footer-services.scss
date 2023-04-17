@@ -1,0 +1,71 @@
+.footer {
+
+    &__social-services {
+        display: flex;
+        flex-direction: column;
+        @media (min-width: $breakpoint-lg) {
+            flex-flow: wrap;
+            justify-content: space-between;  
+		}
+
+    }
+
+    &__social-block-services {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        @media (min-width: $breakpoint-md) {
+			flex-direction: row;
+            gap: 20px;
+            order: 1;
+            flex: 1 1 50%;
+		}
+        @media (min-width: $breakpoint-lg) {
+			flex-direction: row;
+            gap: 20px;
+            order: 1;
+            flex: 1 1 50%;
+		}
+    }
+
+    &__social-media-services {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        padding-top: 30px;
+        @media (min-width: $breakpoint-md) {
+            padding-bottom: 0;
+			flex-direction: row;
+            gap: 20px;
+            order: 2;
+            flex: 1 1 100%;
+		}
+        @media (min-width: $breakpoint-lg) {
+            padding-bottom: 0;
+			flex-direction: row;
+            gap: 20px;
+            order: 3;
+            flex: 1 1 100%;
+		}  
+    }
+
+    &__social-license-services {
+        padding-top: 30px;
+        @media (min-width: $breakpoint-md) {
+			flex-direction: row;
+            order: 3;
+            padding-top: 30px;
+            flex: 1 1 50%;
+		}
+        @media (min-width: $breakpoint-lg) {
+			flex-direction: row;
+            justify-content: flex-end;
+            order: 2;
+            padding: 0;
+            flex: 1 1 50%;
+		}
+    }
+
+}

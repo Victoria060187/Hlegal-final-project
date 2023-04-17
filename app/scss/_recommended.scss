@@ -1,0 +1,90 @@
+.recommended {
+    padding-top: 30px;
+    background: $grey-color;
+    
+  
+    &__head-link {
+        color: $regular-color;
+        text-decoration: none;
+        text-transform: uppercase;
+        @include inner-link;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 4px;
+            left: 110px;
+            width: 9px;
+            height: 9px;
+            border-bottom: 2px solid $regular-color;
+            border-right: 2px solid $regular-color;
+            transform: rotate(-45deg);
+        }
+    }
+
+    &__head-title {
+        @include content-header-md;
+        @include gradient-text;
+        margin-bottom: 30px;
+        @media (min-width: $breakpoint-md) {
+            @include inner-title;
+            padding-top: 10px;
+        }
+    }
+
+    &__cards {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        @media (min-width: $breakpoint-md) {
+            flex-flow: row wrap;
+        }
+    }
+
+    &__card {
+        background: $white-color;
+        border-radius: 8px;
+        overflow: hidden;
+        @media (min-width: $breakpoint-md) {
+            flex: 1 1 45%;
+        }
+        @media (min-width: $breakpoint-lg) {
+            flex: 1 1 30%;
+        }
+    }
+
+    &__card-image {
+        width: 100%;
+        height: 200px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__card-body {
+        padding: 0 30px 30px 30px;
+    }
+
+    &__card-title {
+        @include card-title;
+        padding: 30px 0 15px 0;
+        
+
+    }
+
+    &__card-data {
+        @include card-data;
+        padding-bottom: 15px;
+
+    }
+
+    &__card-text {
+        @include card-text;
+        padding-top: 15px;
+        border-top: 4px solid $grey-separator-color;
+
+    }
+}
+

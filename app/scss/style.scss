@@ -1,0 +1,32 @@
+// 1 и 2 пункты делаются 1 РАЗ!
+// 1. скачать Node на ПК (проверить версию node -v, npm -v)
+// 2. скачать gulp-cli (написать 1 раз: npm i --global gulp-cli)
+
+
+// 3. проект с gulp (имя проекта любое) в этом проекте 1 раз нужно написать: npm i
+
+
+// у вас есть есть следующие команды: 
+// gulp - запустить проект
+// gulp build - сбилдить проект
+// ctrl + C - в терминале выйти из всех задач
+
+@import 'fonts';
+@import 'reset';
+@import 'vars';
+@import 'global';
+@import 'header';
+//MAIN
+@import 'expirience';
+@import 'cards';
+@import '../../node_modules/swiper/swiper.scss';
+@import '../../node_modules/swiper/modules/pagination/pagination.scss';
+@import 'team';
+@import 'partners';
+@import 'recommended';
+//SERVICES
+@import 'header-services';
+@import 'cards-services';
+
+@import 'footer';
+@import 'footer-services';

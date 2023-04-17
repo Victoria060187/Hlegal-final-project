@@ -1,0 +1,119 @@
+$main-color: #323264;
+$white-color: #fff;
+$alt-color: #46466E;
+$soft-color: #686886;
+
+$accent-color: #F8145A;
+
+$regular-color: #24A3FF;
+$regular-hover-color: #0085FF;
+$regular-active-color: #006CCF;
+
+$grey-color: #F5F5FA;
+$grey-alt-color: #EDEDF7;
+$grey-color-text: #B3b3ba;
+$grey-separator-color: #E6E6F0;
+
+$main-gradient:  linear-gradient(129deg, #323264 0%, #323264 74%, #A54B5F 100%);
+$gradient-soft:  linear-gradient(42deg, #323264 15%, #323264 51%, #7A425E 88%);
+$gradient-red: linear-gradient(323.35deg, #F0145A 6.7%, #693264 70.36%);
+$gradient-super-soft:  linear-gradient(229deg, #323264 12%, #323264 57%, #643E72 87%);
+$gradient-red-text: linear-gradient(90deg, #F0145A 0.85%, #EF8080 100%);
+
+
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1440px;
+$breakpoint-xxl: 1920px;
+
+
+$main-radis: 8px;
+
+@mixin gradient-text {
+	background: $gradient-red-text;
+	color: transparent;
+	background-clip: text;
+}
+
+@mixin content-text {
+	font-size: 19px;
+	line-height: 30px;
+	color: $white-color;
+}
+
+@mixin content-header {
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 24px;
+	color: $white-color;
+	padding-bottom: 30px;
+}
+
+@mixin content-header-md {
+	font-weight: 700;
+	font-size: 30px;
+	line-height: 36px;
+}
+
+@mixin cards-title {
+	font-weight: 700;
+	font-size: 22px;
+	line-height: 27px;
+	color: $regular-color;
+}
+
+@mixin inner-link {
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 17px;
+}
+
+@mixin inner-title {
+	font-weight: 700;
+	font-size: 38px;
+	line-height: 46px;
+}
+
+@mixin card-title {
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 20px;
+	color: $regular-color;
+}
+
+@mixin card-data {
+	font-weight: 700;
+	font-size: 12px;
+	line-height: 15px;
+	color: $grey-color-text;
+}
+
+@mixin card-text {
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 22px;
+}
+
+@mixin block-adress {
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 20px;
+}
+
+@mixin block-link {
+	font-weight: 700;
+	font-size: 12px;
+	line-height: 15px;
+}
+
+@mixin media-phone {
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 20px;
+}
+
+@mixin slash-text {
+	font-weight: 400;
+	font-size: 36px;
+	line-height: 44px;
+}
